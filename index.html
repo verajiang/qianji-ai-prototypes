@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>千机 AI 原型预览</title>
+    <link rel="icon" href="data:," />
+    <style>
+      * { box-sizing: border-box; }
+      body {
+        min-width: 320px;
+        min-height: 100vh;
+        margin: 0;
+        color: #404040;
+        background: #fafafd;
+        font-family: "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+      }
+      main { width: min(920px, calc(100% - 40px)); margin: 0 auto; padding: 72px 0; }
+      header { margin-bottom: 32px; }
+      h1 { margin: 0; color: #262626; font-size: 30px; line-height: 40px; }
+      header p { margin: 8px 0 0; color: #737373; }
+      .prototype-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+      article { display: flex; min-height: 220px; flex-direction: column; padding: 24px; border: 1px solid #e5e5e5; border-radius: 8px; background: #fff; }
+      .label { color: #db1084; font-size: 12px; font-weight: 600; }
+      h2 { margin: 12px 0 8px; color: #262626; font-size: 20px; line-height: 28px; }
+      article p { flex: 1; margin: 0; color: #737373; font-size: 14px; line-height: 22px; }
+      a { display: inline-flex; min-height: 40px; align-items: center; justify-content: center; margin-top: 24px; padding: 0 16px; border-radius: 4px; color: #fff; background: #db1084; text-decoration: none; font-weight: 500; }
+      a:hover { background: #a90c66; }
+      @media (max-width: 680px) { main { padding: 40px 0; } .prototype-list { grid-template-columns: 1fr; } }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>千机 AI 原型预览</h1>
+        <p>工作台与页面插件联动原型，两个入口使用同一套最新会话和使用记录逻辑。</p>
+      </header>
+      <section class="prototype-list" aria-label="原型入口">
+        <article>
+          <span class="label">WORKBENCH</span>
+          <h2>业务 AI 工作台</h2>
+          <p>进入问数专家，查看查询过程、分析结果、数据依据、使用记录和多个独立会话。</p>
+          <a href="./liveagent-workbench-keyframes/index.html">打开工作台原型</a>
+        </article>
+        <article>
+          <span class="label">PLUGIN</span>
+          <h2>插件与工作台联动</h2>
+          <p>在业务数据页跨页面收集信息并提问，可继续跳转到最新版工作台深入分析。</p>
+          <a href="./plugin-workbench-prototype/千机AI插件与工作台交互原型.html">打开插件原型</a>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
