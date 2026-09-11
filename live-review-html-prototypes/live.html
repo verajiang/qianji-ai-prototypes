@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>实时驾驶舱</title>
+  <link rel="stylesheet" href="styles.css?v=15">
+</head>
+<body>
+<div class="qj-app" data-shell="dashboard">
+  <main class="qj-app__main">
+    <div class="qj-page" data-density="compact" data-cockpit-app>
+      <header class="cockpit-header">
+        <div><h1 class="qj-page__title">实时驾驶舱</h1><div class="qj-page__meta">直播中实时辅助，下播后沿同一场直播时间回看</div></div>
+        <div class="qj-tabs qj-tabs--segment cockpit-mode-tabs" role="tablist" aria-label="驾驶舱模式">
+          <button class="qj-tabs__tab" role="tab" aria-selected="true" data-cockpit-mode="live">直播中</button>
+          <button class="qj-tabs__tab" role="tab" aria-selected="false" data-cockpit-mode="review">下播复盘</button>
+        </div>
+      </header>
+
+      <section data-cockpit-live>
+      <section class="qj-card live-session-summary" aria-label="当前直播场次">
+        <div class="qj-card__body qj-description">
+          <div class="qj-description__item"><div class="qj-description__label">店铺</div><div class="qj-description__value">COS官方旗舰店</div></div>
+          <div class="qj-description__item"><div class="qj-description__label">场次</div><div class="qj-description__value">秋冬上新专场</div></div>
+          <div class="qj-description__item"><div class="qj-description__label">主播</div><div class="qj-description__value">小福</div></div>
+          <div class="qj-description__item"><div class="qj-description__label">直播时间</div><div class="qj-description__value">13:00–直播中</div></div>
+          <div class="qj-description__item"><div class="qj-description__label">直播时长</div><div class="qj-description__value">04:48:26</div></div>
+        </div>
+      </section>
+      <header class="qj-topbar">
+        <div class="qj-status is-success"><span class="qj-status__dot"></span><span class="qj-status__label">直播中 04:48:26</span></div>
+        <div class="qj-topbar__context qj-cluster"><span class="qj-avatar">89ZP</span><div><strong>89ZP 黑色休闲套装</strong><div class="qj-page__meta">当前讲解 · COS官方旗舰店 · 演示数据</div></div></div>
+        <div class="qj-topbar__profile">讲解时长<strong>18:39</strong></div>
+        <div class="qj-topbar__profile">直播价<strong>¥899</strong></div>
+        <div class="qj-topbar__profile">实时库存<strong>128</strong></div>
+        <div class="qj-topbar__profile">分贝<strong>73 dB</strong></div>
+        <div class="qj-topbar__profile">语速<strong>462 字/分钟</strong></div>
+        <div class="qj-topbar__actions"><label for="state-switch-live">状态演示</label><select id="state-switch-live" class="qj-select" data-state-switch><option value="success">正常</option><option value="loading">加载中</option><option value="empty">暂无数据</option><option value="error">加载失败</option><option value="stale">数据延迟</option><option value="offline">离线</option><option value="reconnecting">重连中</option></select></div>
+      </header>
+
+      <div class="qj-alert" data-kind="state-banner" hidden><span class="qj-alert__icon">!</span><div class="qj-alert__content"><div class="qj-alert__title">实时数据延迟</div><div class="qj-alert__description">当前展示2分钟前数据。</div></div><div class="qj-alert__actions"><button class="qj-button qj-button--outline qj-button--sm" data-retry>立即重试</button></div></div>
+
+      <section data-success-view>
+        <section class="qj-card" data-kind="facts">
+          <div class="qj-card__header"><div><h1 class="qj-card__title">讲解必核对</h1><div class="qj-card__meta">容易说错并可能造成违规的商品事实 · 商品中心 · 16:46:12更新</div></div><div class="qj-status is-warning"><span class="qj-status__icon">!</span><span class="qj-status__label">请按后台信息准确讲解</span></div></div>
+          <div class="qj-card__body qj-description">
+            <div class="qj-description__item"><div class="qj-description__label">面料成分</div><div class="qj-description__value">棉 73% · 聚酯纤维 27%</div></div>
+            <div class="qj-description__item"><div class="qj-description__label">当前款色</div><div class="qj-description__value">89ZP · 黑色</div></div>
+            <div class="qj-description__item"><div class="qj-description__label">赠品</div><div class="qj-description__value">帆布袋</div></div>
+            <div class="qj-description__item"><div class="qj-description__label">运费险</div><div class="qj-description__value">有</div></div>
+          </div>
+        </section>
+
+        <section class="qj-grid" aria-label="主播核心实时指标">
+          <article class="qj-grid__item qj-card qj-metric" data-span="5"><div class="qj-metric__label">5分钟GMV</div><div class="qj-metric__value">12,900<span class="qj-metric__unit">元</span><span class="qj-metric__trend is-warning">↓8%</span></div><div class="qj-metric__scope">当前商品 · 对比前5分钟</div><div class="qj-metric__source">订单中心 · 17:48:00更新</div></article>
+          <article class="qj-grid__item qj-card qj-metric" data-span="5"><div class="qj-metric__label">已付订单</div><div class="qj-metric__value">9<span class="qj-metric__unit">单</span></div><div class="qj-metric__scope">当前讲解周期</div><div class="qj-metric__source">订单中心 · 17:48:26更新</div></article>
+          <article class="qj-grid__item qj-card qj-metric" data-span="4"><div class="qj-metric__label">待付订单</div><div class="qj-metric__value">3<span class="qj-metric__unit">单</span></div><div class="qj-metric__scope">当前讲解周期</div><div class="qj-metric__source">订单中心 · 17:48:26更新</div></article>
+          <article class="qj-grid__item qj-card qj-metric" data-span="5"><div class="qj-metric__label">讲解效率</div><div class="qj-metric__value">276<span class="qj-metric__unit">元/分钟</span></div><div class="qj-metric__scope">当前讲解周期</div><div class="qj-metric__source">成交归因 · 17:47:30更新</div></article>
+          <article class="qj-grid__item qj-card qj-metric" data-span="5"><div class="qj-metric__label">整场GMV</div><div class="qj-metric__value">440,826<span class="qj-metric__unit">元</span></div><div class="qj-metric__scope">本场累计 · 支付口径</div><div class="qj-metric__source">订单中心 · 17:48:26更新</div></article>
+        </section>
+
+        <section class="qj-grid">
+          <article class="qj-grid__item qj-card" data-span="7">
+            <div class="qj-card__header"><div><h2 class="qj-card__title">实时话术统计</h2><div class="qj-card__meta">当前商品 · 近5分钟</div></div><span class="qj-status is-success"><span class="qj-status__dot"></span><span class="qj-status__label">合规93分</span></span></div>
+            <div class="qj-card__body qj-stack">
+              <div class="qj-progress"><span class="qj-progress__label">科技卖点</span><span class="qj-progress__track"><span class="qj-progress__bar" style="width:40%"></span></span><span class="qj-progress__value">40%</span></div>
+              <div class="qj-progress"><span class="qj-progress__label">营销话术</span><span class="qj-progress__track"><span class="qj-progress__bar" style="width:33%"></span></span><span class="qj-progress__value">33%</span></div>
+              <div class="qj-progress"><span class="qj-progress__label">使用场景</span><span class="qj-progress__track"><span class="qj-progress__bar" style="width:27%"></span></span><span class="qj-progress__value">27%</span></div>
+              <div class="qj-card__meta">只展示覆盖情况，不直接给主播动作建议。</div>
+            </div>
+          </article>
+
+          <article class="qj-grid__item qj-card" data-span="10">
+            <div class="qj-card__header"><div><h2 class="qj-card__title">引流直播间TOP短视频</h2><div class="qj-card__meta">解析短视频中的卖点和承接机制 · 近30分钟引流占比31.8%</div></div><span class="qj-tag qj-tag--brand">流量占比较高</span></div>
+            <div class="qj-card__body qj-stack">
+              <div class="qj-list__item"><button class="qj-button qj-button--outline qj-button--icon" data-open-evidence="evidence-modal" data-title="TOP1引流短视频" data-time="视频00:18" data-summary="卖点：男女同款、轻量防风、通勤与轻户外两穿。机制：男女上身对比后切通勤场景，再承接限时赠品。" aria-label="播放TOP1引流短视频">▶</button><div class="qj-list__content"><strong>8J5X 男女同款通勤穿搭</strong><div class="qj-list__meta">引流占比18.6% · 卖点：男女同款、轻量防风 · 机制：上身对比→场景切换→赠品</div></div></div>
+              <div class="qj-divider"></div>
+              <div class="qj-list__item"><button class="qj-button qj-button--outline qj-button--icon" data-open-evidence="evidence-modal" data-title="TOP2引流短视频" data-time="视频00:22" data-summary="卖点：黑色显瘦、整套易搭。机制：细节近景后做新旧穿搭对比，再引导进入商品链接。" aria-label="播放TOP2引流短视频">▶</button><div class="qj-list__content"><strong>89ZP 黑色整套细节</strong><div class="qj-list__meta">引流占比8.4% · 卖点：黑色显瘦、整套易搭 · 机制：近景细节→新旧对比→进链接</div></div></div>
+              <div class="qj-alert"><span class="qj-alert__icon">i</span><div class="qj-alert__content"><div class="qj-alert__title">承接说明</div><div class="qj-alert__description">短视频引流占比高时，可讲其中已核验的卖点和机制；商品事实仍以顶部信息为准。</div></div></div>
+            </div>
+          </article>
+
+          <article class="qj-grid__item qj-card" data-span="7">
+            <div class="qj-card__header"><div><h2 class="qj-card__title">运营配置模块</h2><div class="qj-card__meta">库存与话术墙二选一，避免同时抢占注意力</div></div></div>
+            <div class="qj-tabs" role="tablist" aria-label="运营配置模块"><button id="tab-live-inventory" class="qj-tabs__tab" role="tab" aria-selected="true" aria-controls="panel-live-inventory">实时库存</button><button id="tab-live-talk" class="qj-tabs__tab" role="tab" aria-selected="false" aria-controls="panel-live-talk" tabindex="-1">推荐话术墙</button></div>
+            <div id="panel-live-inventory" class="qj-card__body" role="tabpanel" aria-labelledby="tab-live-inventory"><ul class="qj-list"><li class="qj-list__item"><div class="qj-list__content"><strong>S / M</strong><div class="qj-list__meta">可售库存</div></div><strong>32 / 41</strong></li><li class="qj-list__item"><div class="qj-list__content"><strong>L / XL</strong><div class="qj-list__meta">可售库存</div></div><strong>38 / 17</strong></li><li class="qj-list__item"><div class="qj-list__content"><strong>待支付锁定</strong><div class="qj-list__meta">15分钟后释放</div></div><strong>9</strong></li></ul><div class="qj-card__footer">库存中心 · 17:48:20更新</div></div>
+            <div id="panel-live-talk" class="qj-card__body" role="tabpanel" aria-labelledby="tab-live-talk" hidden><div class="qj-stack"><div class="qj-alert"><span class="qj-alert__icon">1</span><div class="qj-alert__content"><div class="qj-alert__title">通勤场景</div><div class="qj-alert__description">“轻量版型适合叠穿，办公室和周末轻户外都能搭。”</div></div></div><div class="qj-alert"><span class="qj-alert__icon">2</span><div class="qj-alert__content"><div class="qj-alert__title">赠品核对</div><div class="qj-alert__description">“当前下单赠帆布袋，具体以商品链接展示为准。”</div></div></div><div class="qj-card__meta">运营审核版 · 16:55更新</div></div></div>
+          </article>
+        </section>
+      </section>
+
+      <section class="qj-state qj-state--loading" data-state="loading" data-view-state="loading" hidden><div class="qj-skeleton"><div class="qj-skeleton__line"></div><div class="qj-skeleton__block"></div><div class="qj-skeleton__block"></div></div><div class="qj-state__title">正在加载实时数据</div><div class="qj-state__description">商品事实和核心指标返回后自动填充。</div></section>
+      <section class="qj-state qj-state--empty" data-state="empty" data-view-state="empty" hidden><div class="qj-state__visual">—</div><div class="qj-state__title">本场暂未产生数据</div><div class="qj-state__description">开播并产生曝光后，此处展示实时指标。</div></section>
+      <section class="qj-state qj-state--error" data-state="error" data-view-state="error" hidden><div class="qj-state__visual">!</div><div class="qj-state__title">实时数据加载失败</div><div class="qj-state__description">错误编号 LIVE-RT-2048，可重试且不会影响直播。</div><button class="qj-button qj-button--primary" data-retry>重新加载</button></section>
+      <section class="qj-state qj-state--forbidden" data-state="forbidden" data-view-state="forbidden" hidden><div class="qj-state__visual">⌁</div><div class="qj-state__title">无实时驾驶舱权限</div><div class="qj-state__description">请联系店铺管理员申请“直播数据查看”权限。</div></section>
+      </section>
+      <section data-cockpit-review hidden></section>
+    </div>
+  </main>
+</div>
+
+<div id="evidence-modal" class="qj-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="evidence-title" hidden><div class="qj-modal__backdrop"></div><div class="qj-modal__dialog"><div class="qj-modal__header"><div><h2 id="evidence-title" class="qj-card__title" data-modal-title>短视频详情</h2><div class="qj-card__meta" data-modal-time></div></div><button class="qj-button qj-button--icon qj-button--outline" data-close-modal aria-label="关闭短视频弹窗">×</button></div><div class="qj-modal__body"><div class="qj-chart" data-kind="recording">▶ 引流短视频预览</div><div class="qj-alert"><span class="qj-alert__icon">i</span><div class="qj-alert__content"><div class="qj-alert__title">卖点与机制</div><div class="qj-alert__description" data-modal-summary></div></div></div></div><div class="qj-modal__footer"><button class="qj-button qj-button--outline" data-close-modal>关闭</button></div></div></div>
+<div id="review-modal" class="qj-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="review-modal-title" hidden><div class="qj-modal__backdrop" data-close-modal></div><div class="qj-modal__dialog"><div class="qj-modal__header"><div><h2 id="review-modal-title" class="qj-card__title" data-modal-title>录音转写</h2><div class="qj-card__meta" data-modal-time></div></div><button class="qj-button qj-button--icon qj-button--outline" data-close-modal aria-label="关闭">×</button></div><div class="qj-modal__body" data-modal-body></div><div class="qj-modal__footer"><button class="qj-button qj-button--outline" data-close-modal>关闭</button></div></div></div>
+<aside class="qj-card" data-recorder data-kind="review-recorder" hidden><div><span class="qj-status is-error"><span class="qj-status__dot"></span><span class="qj-status__label">正在录音</span></span><strong data-recording-time>00:00</strong></div><button class="qj-button qj-button--danger" data-stop-recording>结束复盘</button></aside>
+<div class="qj-toast-region" aria-live="polite"></div>
+<script src="app.js?v=15"></script>
+</body>
+</html>

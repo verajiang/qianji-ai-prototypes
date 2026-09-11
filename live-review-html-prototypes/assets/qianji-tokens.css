@@ -1,0 +1,65 @@
+:root {
+  color-scheme: light;
+  --qj-color-canvas: #fafafd;
+  --qj-color-surface: #ffffff;
+  --qj-color-surface-subtle: #fafafa;
+  --qj-color-surface-muted: #f5f5f5;
+  --qj-color-surface-dark: #4c4b64;
+  --qj-color-text: #404040;
+  --qj-color-text-strong: #262626;
+  --qj-color-text-muted: #737373;
+  --qj-color-text-placeholder: #a3a3a3;
+  --qj-color-text-brand: #db1084;
+  --qj-color-text-on-brand-muted: #fde4f1;
+  --qj-color-text-on-primary: #ffffff;
+  --qj-color-border: #e5e5e5;
+  --qj-color-border-strong: #d4d4d4;
+  --qj-color-action-primary: #db1084;
+  --qj-color-action-primary-hover: #f8a9d0;
+  --qj-color-action-primary-active: #a90c66;
+  --qj-color-action-disabled: #e5e5e5;
+  --qj-color-link: #db1084;
+  --qj-color-link-hover: #f8a9d0;
+  --qj-color-link-active: #a90c66;
+  --qj-color-link-disabled: #737373;
+  --qj-color-success: #52c41a;
+  --qj-color-success-bg: #f6ffed;
+  --qj-color-warning: #ff9d0b;
+  --qj-color-warning-bg: #fff6e6;
+  --qj-color-danger: #ff2626;
+  --qj-color-danger-bg: #fff0f0;
+  --qj-color-info: #2461fb;
+  --qj-chart-purple: #722ed1;
+  --qj-chart-cyan: #14c9c9;
+  --qj-chart-blue: #3491fa;
+  --qj-chart-orange: #f77234;
+  --qj-space-0: 0;
+  --qj-space-1: 2px;
+  --qj-space-2: 4px;
+  --qj-space-3: 5px;
+  --qj-space-4: 6px;
+  --qj-space-5: 8px;
+  --qj-space-6: 12px;
+  --qj-space-7: 16px;
+  --qj-space-8: 24px;
+  --qj-radius-0: 0;
+  --qj-radius-1: 2px;
+  --qj-radius-2: 4px;
+  --qj-radius-3: 8px;
+  --qj-radius-4: 16px;
+  --qj-radius-5: 20px;
+  --qj-radius-6: 32px;
+  --qj-font-sans: "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+  --qj-font-number: "Open Sans", "PingFang SC", sans-serif;
+  --qj-shadow-popover: 0 8px 24px rgb(0 0 0 / 10%);
+  --qj-focus-ring: 0 0 0 3px rgb(219 16 132 / 20%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
